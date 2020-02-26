@@ -28,14 +28,17 @@
   font-family: "Lato", "Arial", sans-serif;
 }
 
+body {
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1020px;
   height: 89px;
-  margin-left: auto;
-  margin-right: auto;
 
   background-color: rgb(45, 48, 58);
   border-bottom: 6px solid #323746;
@@ -55,14 +58,14 @@ h1 {
   letter-spacing: -0.442px;
 }
 
-ul {
+nav ul {
   display: flex;
   flex-direction: row;
   padding-top: 10px;
   padding-right: 40.09px;
 }
 
-li {
+nav li {
   padding-left: 13.695px;
 
   font-size: 12px;
@@ -72,13 +75,13 @@ li {
   letter-spacing: -0.230px;
 }
 
-li:nth-of-type(2n) {
+nav li:nth-of-type(2n) {
   color: #494e62;
 
   cursor: default;
 }
 
-li:nth-of-type(2n+1):hover {
+nav li:nth-of-type(2n+1):hover {
   color: #e8b8b5;
 
   transition: 0.3s;
@@ -86,7 +89,7 @@ li:nth-of-type(2n+1):hover {
   cursor: pointer;
 }
 
-li:nth-of-type(2n+1):active {
+nav li:nth-of-type(2n+1):active {
   color: #f06c64;
 }
 
@@ -246,4 +249,68 @@ article:nth-of-type(3n) h3 {
 
 .star {
   background-image: url('assets/star.svg');
+}
+
+.portfolio {
+  display: flex;
+  height: 863px;
+
+  background-color: rgb(45, 48, 58);
+  border-bottom: 6px solid rgb(50, 55, 70);
+}
+
+.portfolio .wrapper {
+  padding: 63px 40px 0px 40px;
+  color: #666d89;
+}
+
+.portfolio ul {
+  display: flex;
+
+  font-size: 12px;
+  font-weight: 600;
+  color: #e8b8b5;
+  list-style: none;
+  letter-spacing: -0.230px;
+  padding: 0px;
+}
+
+.portfolio li {
+  margin-top: 7px;
+  margin-right: 9px;
+  margin-left: 1px;
+  padding: 3px 7px;
+
+  text-align: center;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+  letter-spacing: -0.31px;
+}
+
+.portfolio a {
+  color: #666d89;
+  text-decoration: none;
+}
+
+.portfolio .active {
+  border: 1px solid white;
+}
+
+.portfolio .active a {
+  color: white;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery img {
+  margin-top: 20px;
+}
+
+.gallery img:nth-of-type(-n+4) {
+  margin-top: 19px;
 }
