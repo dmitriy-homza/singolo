@@ -169,7 +169,7 @@ h2 {
 }
 
 p {
-  padding-top: 18px;
+  padding-top: 17px;
 
   font-size: 18px;
   font-weight: 200;
@@ -189,16 +189,21 @@ p span {
   margin-top: 40px;
 }
 
+.advantage-wrapper h3 {
+  letter-spacing: -0.4px;
+}
+
 article {
   padding-left: 78px;
 
   background-repeat: no-repeat;
   background-size: 59px;
-  background-position: 1.1px 4px;
+  background-position: 1.1px 5px;
 }
 
 h3 {
   padding-top: 2px;
+  padding-left: 2px;
 
   color: #666d89;
 }
@@ -225,7 +230,7 @@ article:nth-of-type(3n+2) {
 }
 
 article:nth-of-type(3n) h3 {
-  padding-left: 2px;;
+  padding-left: 4px;;
 }
 
 .custom-design {
@@ -261,9 +266,17 @@ article:nth-of-type(3n) h3 {
 }
 
 .portfolio .wrapper {
-  padding: 63px 40px 0px 40px;
+  padding: 62px 40px 0px 40px;
 
   color: #666d89;
+}
+
+.portfolio h2 {
+  letter-spacing: 0.3px;
+}
+
+.portfolio p {
+  letter-spacing: -0.21px;
 }
 
 .portfolio ul {
@@ -271,17 +284,17 @@ article:nth-of-type(3n) h3 {
   padding: 0px;
 
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
   color: #e8b8b5;
   list-style: none;
   letter-spacing: -0.230px;
 }
 
 .portfolio li {
-  margin-top: 7px;
+  margin-top: 9px;
   margin-right: 9px;
   margin-left: 1px;
-  padding: 3px 7px;
+  padding: 3px 7.3px;
 
   text-align: center;
   letter-spacing: -0.31px;
@@ -324,11 +337,13 @@ article:nth-of-type(3n) h3 {
 }
 
 .gallery img {
-  margin-top: 19px;
+  width: 220px;
+  height: 187px;
+  margin-top: 20px;
 }
 
 .gallery img:nth-of-type(-n+4) {
-  margin-top: 18px;
+  margin-top: 19px;
 }
 
 .about {
@@ -341,10 +356,14 @@ article:nth-of-type(3n) h3 {
   border-bottom: 6px solid white;
 }
 
+.about h2 {
+  letter-spacing: -0.1px;
+}
+
 .card {
   display: flex;
   width: 300px;
-  margin-top: 42px;
+  margin-top: 43px;
 
   text-align: justify;
   flex-direction: column;
@@ -355,6 +374,7 @@ h4 {
 
   font-size: 18px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .workers {
