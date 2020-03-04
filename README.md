@@ -14,6 +14,6 @@ Singolo.Part 1 | Singolo.Part 2 | Singolo.Part 3
 [Последний коммит 1 части (22 февраля)](https://github.com/dmitriy-homza/singolo/commit/e4535045701a3dcd27fb903bcfc5a6249e34d6de) | [Последний коммит 2 части (1 марта)](https://github.com/dmitriy-homza/singolo/commit/e298116f602bb02417d2cb1987fc272cc0bd1fff) | [Последний коммит 3 части (4 марта)](https://github.com/dmitriy-homza/singolo/commit/412481cfa865a884e75291da134b5472d3b8db99) 
 [Конечный файл 1 части](https://github.com/dmitriy-homza/singolo/blob/gh-pages/index1.html) | [Конечный файл 2 части](https://github.com/dmitriy-homza/singolo/blob/gh-pages/index2.html) | [Конечный файл 3 части](https://github.com/dmitriy-homza/singolo/blob/gh-pages/index3.html)
 
-Заранее извиняюсь за принесенные неудобства, но другого выходы из образовавщейся ситуации не вижу. Если будут какие-то вопросы - с радостью вам отвечу на них. 
+Заранее извиняюсь за принесенные неудобства, но другого выходы из образовавшейся ситуации не вижу. Если будут какие-то вопросы - с радостью вам отвечу на них. 
 
 [Мой Telegram](https://t.me/Dmitriy_Homza)
