@@ -1,5 +1,7 @@
 # Singolo. Гомза Дмитрий. 
 
+[Финальная версия](https://dmitriy-homza.github.io/singolo/)
+
 В репозитории имеется две ветки: 
 * [**master**](https://github.com/dmitriy-homza/singolo/commits/master) - В ней расположена финальная, объединенная версия 
 * [**gh-pages**](https://github.com/dmitriy-homza/singolo/commits/gh-pages) - Ветка, в которой непосредственно велась работа над заданием. История коммитов отображена именно в ней и на нее в данный момент ссылается [GitHub Pages](https://dmitriy-homza.github.io/singolo/)
