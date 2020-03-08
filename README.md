@@ -1,6 +1,6 @@
 # Singolo. Гомза Дмитрий. 
 
-[Финальная версия](https://dmitriy-homza.github.io/singolo/)
+[**Финальная версия**](https://dmitriy-homza.github.io/singolo/)
 
 В репозитории имеется две ветки: 
 * [**master**](https://github.com/dmitriy-homza/singolo/commits/master) - В ней расположена финальная, объединенная версия 
