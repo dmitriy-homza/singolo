@@ -42,14 +42,29 @@ header {
 
   background-color: rgb(45, 48, 58);
   border-bottom: 6px solid #323746;
+
+  transition: 0.3s;
 }
 
 header span {
   color: #f06c64;
 }
 
+.sticky {
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+
+  width: 1020px;
+  height: 48px;
+
+  border-bottom: 3px solid #323746;
+
+  transition: 0.3s;
+}
+
 h1 {
-  margin-top: -1px;
+  margin-top: 10px;
   margin-left: 40px;
 
   font-size: 25px;
@@ -61,7 +76,7 @@ h1 {
 nav ul {
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
+  padding-top: 5px;
   padding-right: 40.09px;
 }
 
@@ -70,9 +85,13 @@ nav li {
 
   font-size: 12px;
   font-weight: 600;
-  color: white;
   list-style: none;
   letter-spacing: -0.230px;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
 }
 
 nav li:nth-of-type(2n) {
@@ -81,20 +100,17 @@ nav li:nth-of-type(2n) {
   cursor: default;
 }
 
-nav li:nth-of-type(2n+1):hover {
+nav li:nth-of-type(2n+1):hover a {
   color: #e8b8b5;
-
   transition: 0.3s;
-
   cursor: pointer;
 }
 
-nav li:nth-of-type(2n+1):active {
+nav li:nth-of-type(2n+1):active a {
   color: #f06c64;
 }
 
-
-.active {
+.active a {
   color: #f06c64;
 }
 
@@ -108,25 +124,123 @@ nav li:nth-of-type(2n+1):active {
 
   background-color: #f06c64;
   border-bottom: 5px solid rgb(234, 103, 107);
+
+  transition: 0.5s;
+}
+
+.blue {
+  background-color: #648BF0;
+  border-bottom: 5px solid #3C5AA6;
+  transition: 0.5s;
 }
 
 .slider img {
   align-self: center;
 }
 
-.prev {
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item {
+  display: none;
+  position: relative;
+  animation: 0.5s ease-in-out;
+  width: 100%;
+}
+
+.s-active, .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next {
+  position: absolute;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.slide-1 img:first-of-type{
+  margin-right: 72px;
+}
+
+.vert-screen {
+  position: absolute;
+  left: 68px;
+  bottom: 91px;
+  z-index: 1;
+
+  transition: 0.5s;
+}
+
+.hori-screen {
+  position: absolute;
+  left: 427px;
+  bottom: 166px;
+  z-index: 1;
+
+  transition: 0.5s;
+}
+
+.to-dark {
+  filter: brightness(0);
+  transition: 0.5s;
+}
+
+.left {
   margin-left: 42px;
   margin-bottom: 6px;
 }
 
-.next {
+.right {
   transform: scale(-1, 1);
 
   margin-right: 40px;
   margin-bottom: 6px;
 }
 
-.prev:hover, .next:hover {
+.left:hover, .right:hover {
   transition: 0.4s;
 
   cursor: pointer;

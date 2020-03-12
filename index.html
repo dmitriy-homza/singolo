@@ -2,32 +2,42 @@
 <html lang="ru" dir="ltr"><head>
     <meta charset="utf-8">
     <title>Singolo</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
       <h1>SINGOLO<span>*</span></h1>
       <nav>
         <ul>
-          <li class="active">HOME</li>
+          <li class="active"><a href="#slider" onclick="event.preventDefault()">HOME</a></li>
           <li>·</li>
-          <li>SERVICES</li>
+          <li><a href="#services" onclick="event.preventDefault()">SERVICES</a></li>
           <li>·</li>
-          <li>PORTFOLIO</li>
+          <li><a href="#portfolio" onclick="event.preventDefault()">PORTFOLIO</a></li>
           <li>·</li>
-          <li>ABOUT</li>
+          <li><a href="#about" onclick="event.preventDefault()">ABOUT</a></li>
           <li>·</li>
-          <li>CONTACT</li>
+          <li><a href="#quote" onclick="event.preventDefault()">CONTACT</a></li>
         </ul>
       </nav>
     </header>
-    <div class="slider">
-      <img src="assets/chev.png" class="prev" alt="Предыдущий">
-      <img src="assets/Vertical.png" class="vert" width="240" height="483" alt="Вертикальный мокап">
-      <img src="assets/Horizontal.png" class="horizont" width="484" height="240" alt="Горизонтальный мокап">
-      <img src="assets/chev.png" class="next" alt="Следующий">
+    <div class="slider" id="slider">
+      <img src="assets/chev.png" class="left" alt="Предыдущий">
+      <div class="slider-wrapper">
+        <div class="item s-active slide-1">
+          <img src="assets/Vertical.png" class="vert" width="240" height="483" alt="Вертикальный мокап">
+          <img src="assets/slider/phone-vertical-display.png" class="vert-screen" width="188" height="333" alt="Вертикальный мокап">
+          <img src="assets/slider/phone-horizontal-display.png" class="hori-screen" width="333" height="188" alt="Горизонтальный мокап">
+          <img src="assets/Horizontal.png" class="horizont" width="484" height="240" alt="Горизонтальный мокап">
+        </div>
+        <div class="item slide-2">
+          <img src="assets/slider/item2.png" class="horizont" width="525" height="521" alt="Второй слайд">
+        </div>
+      </div>
+
+      <img src="assets/chev.png" class="right" alt="Следующий">
     </div>
-    <section class="services">
+    <section class="services" id="services">
       <div class="wrapper">
         <h2>Our Services</h2>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget <span>lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
@@ -59,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="wrapper">
         <h2>Portfolio</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -85,7 +95,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="wrapper">
         <h2>About Us</h2>
           <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget <span>lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
@@ -126,7 +136,7 @@
         </div>
       </div>
     </section>
-    <section class="quote">
+    <section class="quote" id="quote">
       <div class="wrapper">
         <h2>Get a Quote</h2>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget <span>lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
@@ -165,4 +175,6 @@
       </div>
     </footer>
   </body>
+  <script src="script.js"></script>
+
 </html>
