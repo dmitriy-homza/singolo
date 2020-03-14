@@ -29,8 +29,7 @@ for (i=0; i<oddNavLink.length; i++) {
 };
 
 window.onscroll = function() {
-  if (window.pageYOffset > header.offsetTop) {
-
+  if (window.pageYOffset > header.offsetTop+50) {
     header.classList.add("sticky");
     // Активные ссылки
     if (window.pageYOffset+150 >= header.offsetTop) {
@@ -121,6 +120,15 @@ document.querySelector('.right').addEventListener('click', function() {
 
 
 // Экранчик тухнут
+let vertPhone = document.querySelector('.vert');
+vertPhone.addEventListener('click', function () {
+  if (vert.getAttribute('class').substr(12) != 'to-dark') {
+    vert.classList.add('to-dark');
+  }
+  else {
+    vert.classList.remove('to-dark');
+  }
+});
 let vert = document.querySelector('.vert-screen');
 vert.addEventListener('click', function () {
   if (vert.getAttribute('class').substr(12) != 'to-dark') {
@@ -139,4 +147,124 @@ hori.addEventListener('click', function () {
   else {
     hori.classList.remove('to-dark');
   }
+});
+let horiPhone = document.querySelector('.horizont');
+horiPhone.addEventListener('click', function () {
+  if (hori.getAttribute('class').substr(12) != 'to-dark') {
+    hori.classList.add('to-dark');
+  }
+  else {
+    hori.classList.remove('to-dark');
+  }
+});
+
+//Переключение табов
+function changeOrder() {
+  imgArray[z].classList.add('ordered');
+}
+
+let imgArray = document.querySelectorAll('.gallery img');
+let tabsArray = document.querySelectorAll('.portfolio a');
+for (let i = 0; i<tabsArray.length; i++) {
+  tabsArray[i].addEventListener('click', function() {
+    if (i!=0) {
+      document.querySelector('#portfolio').classList.remove('portfolio-full');
+    }
+    else {
+      document.querySelector('#portfolio').classList.add('portfolio-full');
+    }
+    for (let k = 0; k<tabsArray.length; k++){
+      tabsArray[k].querySelector('li').classList.remove('active');
+    }
+    tabsArray[i].querySelector('li').classList.add('active');
+    for (let z = 0; z<imgArray.length; z++){
+      imgArray[z].classList.add('change-animation');
+      setTimeout(() => imgArray[z].classList.remove('ordered'),300);
+      setTimeout(() => imgArray[z].classList.remove('order-3'),300);
+      setTimeout(() => imgArray[z].classList.remove('order-2'),300);
+      setTimeout(() => imgArray[z].classList.remove('order-1'),300);
+
+      /*if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]===imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0] & i!=0) {
+          setTimeout(() => imgArray[z].classList.add('ordered'),300);
+          setTimeout(() => imgArray[imgArray.length-1].classList.add('order-last'),300);
+          setTimeout(() => imgArray[imgArray.length-1].classList.add('ordered'),300);
+      }
+      else {
+          setTimeout(() => imgArray[z].classList.remove('ordered'),300);
+      }*/
+      if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Web') {
+          if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Web') {
+            setTimeout(() => imgArray[z].classList.add('ordered'),300);
+          }
+          setTimeout(() => imgArray[imgArray.length-1].classList.add('order-3'),300);
+      };
+      if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Graphic') {
+          if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Graphic') {
+            setTimeout(() => imgArray[z].classList.add('ordered'),300);
+          }
+          setTimeout(() => imgArray[imgArray.length-2].classList.add('order-3'),300);
+          setTimeout(() => imgArray[imgArray.length-1].classList.add('order-2'),300);
+      };
+      if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Artwork') {
+          if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Artwork') {
+            setTimeout(() => imgArray[z].classList.add('ordered'),300);
+          }
+          setTimeout(() => imgArray[imgArray.length-3].classList.add('order-3'),300);
+          setTimeout(() => imgArray[imgArray.length-2].classList.add('order-2'),300);
+          setTimeout(() => imgArray[imgArray.length-1].classList.add('order-1'),300);
+      };
+      imgArray[z].addEventListener('animationend', function () {
+        this.classList.remove('change-animation');
+      });
+    }
+  })
+}
+
+//Взаимодействие с картинками
+
+for (let r = 0; r<imgArray.length; r++){
+  imgArray[r].addEventListener('click', function() {
+    for (let h = 0; h<imgArray.length; h++){
+      imgArray[h].classList.remove('clicked-img');
+      imgArray[r].classList.add('clicked-img');
+    }
+
+  });
+}
+
+//Pop-up
+let name = document.querySelector('#name').value;
+let email = document.querySelector('#email').value;
+let subject = document.querySelector('#subject').value;
+let message = document.querySelector('textarea').value;
+let submit = document.querySelector('#submit');
+let pop = document.querySelector('.popup');
+const regExpName = /^[a-zA-ZА-Яа-яЁё\s]+$/;
+
+  submit.addEventListener('click', function(){
+    if (regExpName.test(document.querySelector('#name').value)==true) {
+      console.log('Прошло');
+      if (document.querySelector('#subject').value!=='') {
+        document.querySelector('.pop-subject').innerHTML=('Тема: '+'<span>'+document.querySelector('#subject').value+'</span>');
+      }
+      else {
+        document.querySelector('.pop-subject').innerHTML=('Без темы');
+      }
+      if (document.querySelector('textarea').value!=='') {
+        document.querySelector('.pop-message').innerHTML=('Описание: '+'<span>'+document.querySelector('textarea').value)+'</span>';
+      }
+      else {
+        document.querySelector('.pop-message').innerHTML=('Без описания');
+      }
+      pop.classList.remove('not-display');}
+else {
+  console.log('Не прошло')
+}
+  });
+
+
+document.querySelector('button').addEventListener('click', function(){
+  pop.classList.add('not-display');
+  document.querySelector('main').classList.remove('de-emphasized');
+  document.querySelector('body').classList.remove('overflow-hidden');
 });
