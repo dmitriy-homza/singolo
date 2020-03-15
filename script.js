@@ -240,9 +240,13 @@ let message = document.querySelector('textarea').value;
 let submit = document.querySelector('#submit');
 let pop = document.querySelector('.popup');
 const regExpName = /^[a-zA-ZА-Яа-яЁё\s]+$/;
+const regExpEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/;
 
   submit.addEventListener('click', function(){
-    if (regExpName.test(document.querySelector('#name').value)==true) {
+    document.querySelector('.submit-form p').remove();
+    let notice = document.createElement('p');
+    document.querySelector('.submit-form').appendChild(notice);
+    if (regExpName.test(document.querySelector('#name').value) & regExpEmail.test(document.querySelector('#email').value)) {
       console.log('Прошло');
       if (document.querySelector('#subject').value!=='') {
         document.querySelector('.pop-subject').innerHTML=('Тема: '+'<span>'+document.querySelector('#subject').value+'</span>');
@@ -256,10 +260,17 @@ const regExpName = /^[a-zA-ZА-Яа-яЁё\s]+$/;
       else {
         document.querySelector('.pop-message').innerHTML=('Без описания');
       }
-      pop.classList.remove('not-display');}
-else {
-  console.log('Не прошло')
-}
+      pop.classList.remove('not-display');
+    }
+    else if (regExpName.test(document.querySelector('#name').value)) {
+        document.querySelector('.submit-form p').innerHTML = 'Введите Email в необходимом формате';
+    }
+    else if (regExpEmail.test(document.querySelector('#email').value)) {
+        document.querySelector('.submit-form p').innerHTML = 'Введите имя в необходимом формате';
+    }
+    else {
+      notice.innerHTML = 'Введите имя и Email в необходимом формате';
+    }
   });
 
 

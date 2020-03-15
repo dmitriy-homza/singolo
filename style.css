@@ -691,7 +691,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 input[type=submit] {
-  width: 300px;
+  width: 280px;
 
   font-weight: 600;
   color: white;
@@ -743,6 +743,33 @@ textarea {
   color: #f0d8d9;
 }
 
+.submit-form {
+  display: flex;
+  align-items: center;
+}
+
+.submit-form p {
+  margin-left: 20px;
+  margin-bottom: 17px;
+  padding: 0px;
+
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #610000;
+
+  animation: to-submit 0.5s;
+}
+
+@keyframes to-submit {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .a-links {
   display: flex;
   flex-direction: column;
@@ -791,6 +818,8 @@ footer .social img:hover {
   color: white;
 
   background-color: #2d303a;
+
+  animation: to-submit 0.3s;
 }
 
 .not-display {
