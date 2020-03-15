@@ -263,7 +263,7 @@ const regExpEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/;
       pop.classList.remove('not-display');
     }
     else if (regExpName.test(document.querySelector('#name').value)) {
-        document.querySelector('.submit-form p').innerHTML = 'Введите имя в необходимом формате';
+        document.querySelector('.submit-form p').innerHTML = 'Введите Email в необходимом формате';
     }
     else if (regExpEmail.test(document.querySelector('#email').value)) {
         document.querySelector('.submit-form p').innerHTML = 'Введите имя в необходимом формате';
