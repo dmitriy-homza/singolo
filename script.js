@@ -120,7 +120,7 @@ document.querySelector('.right').addEventListener('click', function() {
 
 
 // Экранчик тухнут
-let vertPhone = document.querySelector('.vert');
+let vertPhone = document.querySelector('.VPhone');
 vertPhone.addEventListener('click', function () {
   if (vert.getAttribute('class').substr(12) != 'to-dark') {
     vert.classList.add('to-dark');
@@ -148,7 +148,7 @@ hori.addEventListener('click', function () {
     hori.classList.remove('to-dark');
   }
 });
-let horiPhone = document.querySelector('.horizont');
+let horiPhone = document.querySelector('.HPhone');
 horiPhone.addEventListener('click', function () {
   if (hori.getAttribute('class').substr(12) != 'to-dark') {
     hori.classList.add('to-dark');
@@ -263,7 +263,7 @@ const regExpEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/;
       pop.classList.remove('not-display');
     }
     else if (regExpName.test(document.querySelector('#name').value)) {
-        document.querySelector('.submit-form p').innerHTML = 'Введите Email в необходимом формате';
+        document.querySelector('.submit-form p').innerHTML = 'Введите имя в необходимом формате';
     }
     else if (regExpEmail.test(document.querySelector('#email').value)) {
         document.querySelector('.submit-form p').innerHTML = 'Введите имя в необходимом формате';

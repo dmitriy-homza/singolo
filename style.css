@@ -312,6 +312,24 @@ nav li:nth-of-type(2n+1):active a {
   margin-right: -17px;
 }
 
+.VPhone {
+  position: absolute;
+  top: 0px;
+  left: 73px;
+
+  margin-bottom: 5.9px;
+  margin-left: -17.9px;
+}
+
+.HPhone {
+  position: absolute;
+  top: 121px;
+  left: 368px;
+
+  margin-bottom: 5.9px;
+  margin-right: -17px;
+}
+
 .services {
   width: 1020px;
   height: 494px;
