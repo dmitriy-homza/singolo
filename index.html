@@ -2,32 +2,45 @@
 <html lang="ru" dir="ltr"><head>
     <meta charset="utf-8">
     <title>Singolo</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+  <main>
     <header>
       <h1>SINGOLO<span>*</span></h1>
       <nav>
         <ul>
-          <li class="active">HOME</li>
+          <li class="active"><a href="#slider" onclick="event.preventDefault()">HOME</a></li>
           <li>·</li>
-          <li>SERVICES</li>
+          <li><a href="#services" onclick="event.preventDefault()">SERVICES</a></li>
           <li>·</li>
-          <li>PORTFOLIO</li>
+          <li><a href="#portfolio" onclick="event.preventDefault()">PORTFOLIO</a></li>
           <li>·</li>
-          <li>ABOUT</li>
+          <li><a href="#about" onclick="event.preventDefault()">ABOUT</a></li>
           <li>·</li>
-          <li>CONTACT</li>
+          <li><a href="#quote" onclick="event.preventDefault()">CONTACT</a></li>
         </ul>
       </nav>
     </header>
-    <div class="slider">
-      <img src="assets/chev.png" class="prev" alt="Предыдущий">
-      <img src="assets/Vertical.png" class="vert" width="240" height="483" alt="Вертикальный мокап">
-      <img src="assets/Horizontal.png" class="horizont" width="484" height="240" alt="Горизонтальный мокап">
-      <img src="assets/chev.png" class="next" alt="Следующий">
+    <div class="header-imitation">
     </div>
-    <section class="services">
+    <section class="slider" id="slider">
+      <img src="assets/chev.png" class="left" alt="Предыдущий">
+      <div class="slider-wrapper">
+        <div class="item s-active slide-1">
+          <img src="assets/Vertical.png" class="vert" width="240" height="483" alt="Вертикальный мокап">
+          <img src="assets/slider/phone-vertical-display.png" class="vert-screen" width="188" height="333" alt="Вертикальный мокап">
+          <img src="assets/slider/phone-horizontal-display.png" class="hori-screen" width="333" height="188" alt="Горизонтальный мокап">
+          <img src="assets/Horizontal.png" class="horizont" width="484" height="240" alt="Горизонтальный мокап">
+        </div>
+        <div class="item slide-2">
+          <img src="assets/slider/item2.png" class="horizont" width="525" height="521" alt="Второй слайд">
+        </div>
+      </div>
+
+      <img src="assets/chev.png" class="right" alt="Следующий">
+    </section>
+    <section class="services" id="services">
       <div class="wrapper">
         <h2>Our Services</h2>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget <span>lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
@@ -59,33 +72,33 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio portfolio-full portfolio-row" id="portfolio">
       <div class="wrapper">
         <h2>Portfolio</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <ul>
-          <li class="active"><a href="#">All</a></li>
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Graphic Design</a></li>
-          <li><a href="#">Artwork</a></li>
+          <a href="#" onclick="event.preventDefault()"><li class="active">All</li></a>
+          <a href="#" onclick="event.preventDefault()"><li>Web Design</li></a>
+          <a href="#" onclick="event.preventDefault()"><li>Graphic Design</li></a>
+          <a href="#" onclick="event.preventDefault()"><li>Artwork</li></a>
         </ul>
         <div class="gallery">
-          <img src="assets/Project.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project3.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project6.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project9.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project1.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project4.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project7.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project10.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project2.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project5.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project8.png" width="220" height="187" alt="Изображение галлереи">
-          <img src="assets/Project11.png" width="220" height="187" alt="Изображение галлереи">
+          <img src="assets/Project.png" width="220" height="187" class="All" alt="Изображение галлереи">
+          <img src="assets/Project3.png" width="220" height="187" class="Graphic" alt="Изображение галлереи">
+          <img src="assets/Project6.png" width="220" height="187" class="Web" alt="Изображение галлереи">
+          <img src="assets/Project9.png" width="220" height="187" class="Artwork" alt="Изображение галлереи">
+          <img src="assets/Project1.png" width="220" height="187" class="other" alt="Изображение галлереи">
+          <img src="assets/Project4.png" width="220" height="187" class="other" alt="Изображение галлереи">
+          <img src="assets/Project7.png" width="220" height="187" class="other" alt="Изображение галлереи">
+          <img src="assets/Project10.png" width="220" height="187" class="other" alt="Изображение галлереи">
+          <img src="assets/Project2.png" width="220" height="187" class="other" alt="Изображение галлереи">
+          <img src="assets/Project5.png" width="220" height="187" class="other" alt="Изображение галлереи">
+          <img src="assets/Project8.png" width="220" height="187" class="other" alt="Изображение галлереи">
+          <img src="assets/Project11.png" width="220" height="187" class="other" alt="Изображение галлереи">
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="wrapper">
         <h2>About Us</h2>
           <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget <span>lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
@@ -126,17 +139,20 @@
         </div>
       </div>
     </section>
-    <section class="quote">
+    <section class="quote" id="quote">
       <div class="wrapper">
         <h2>Get a Quote</h2>
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget <span>lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
         <div class="quote-content">
           <form class="get-a-quote" action="index.html" method="post">
-            <input type="text" name="Name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" placeholder="Name (Required)" required>
-            <input type="email" name="Email" placeholder="Email (Required)" required>
-            <input type="text" name="Subject" placeholder="Subject">
+            <input type="text" name="Name" id="name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" placeholder="Name (Required)" required>
+            <input type="email" name="Email" id="email" placeholder="Email (Required)" required>
+            <input type="text" name="Subject" id="subject" placeholder="Subject">
             <textarea name="Details" rows="13" cols="80" placeholder="Describe your project in detail..."></textarea>
-            <input type="submit" name="submit" value="Submit">
+            <div class="submit-form">
+              <input type="submit" name="submit" id="submit" onclick="event.preventDefault()" value="Submit">
+              <p></p>
+            </div>
           </form>
           <div class="contacts">
             <h5>Contact Information</h5>
@@ -164,5 +180,16 @@
         </div>
       </div>
     </footer>
+  </main>
+  <div class="popup not-display">
+    <div class="pop-wrap">
+      <h2>Письмо отправлено</h2>
+      <p class="pop-subject"></p>
+      <p class="pop-message"></p>
+    </div>
+    <button type="button" name="button">Ок</button>
+  </div>
   </body>
+  <script src="script.js"></script>
+
 </html>
