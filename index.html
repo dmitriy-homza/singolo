@@ -74,7 +74,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio portfolio-full portfolio-row" id="portfolio">
+    <section class="portfolio portfolio-full" id="portfolio">
       <div class="wrapper">
         <h2>Portfolio</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -147,10 +147,10 @@
         <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget <span>lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></p>
         <div class="quote-content">
           <form class="get-a-quote" action="index.html" method="post">
-            <input type="text" name="Name" id="name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" placeholder="Name (Required)" required>
+            <input type="text" name="Name" id="name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" placeholder="Name (Required)" maxlength="80" required>
             <input type="email" name="Email" id="email" placeholder="Email (Required)" required>
-            <input type="text" name="Subject" id="subject" placeholder="Subject">
-            <textarea name="Details" rows="13" cols="80" placeholder="Describe your project in detail..."></textarea>
+            <input type="text" name="Subject" id="subject" placeholder="Subject" maxlength="120">
+            <textarea name="Details" rows="13" cols="80" placeholder="Describe your project in detail..." maxlength="6000"></textarea>
             <div class="submit-form">
               <input type="submit" name="submit" id="submit" onclick="event.preventDefault()" value="Submit">
               <p></p>
