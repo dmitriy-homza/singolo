@@ -7,6 +7,7 @@ let about = document.querySelector('#about');
 let quote = document.querySelector('#quote');
 
 
+//Отсеиваем не ссылки (точки) в навигации
 let oddNavLink = [];
 let z = 0;
 for (let i = 0; i<=navLink.length-1; i++) {
@@ -16,6 +17,8 @@ for (let i = 0; i<=navLink.length-1; i++) {
   }
 }
 
+
+//Активируем перемещение к секции по клику
 for (i=0; i<oddNavLink.length; i++) {
   oddNavLink[i].addEventListener('click', function(){
   document.querySelector('ul li.active').classList.remove('active');
@@ -167,23 +170,13 @@ let imgArray = document.querySelectorAll('.gallery img');
 let tabsArray = document.querySelectorAll('.portfolio a');
 for (let i = 0; i<tabsArray.length; i++) {
   tabsArray[i].addEventListener('click', function() {
-    if (i!=0) {
+    /*if (i!=0) {
       document.querySelector('#portfolio').classList.remove('portfolio-full');
     }
     else {
       document.querySelector('#portfolio').classList.add('portfolio-full');
     }
-    for (let k = 0; k<tabsArray.length; k++){
-      tabsArray[k].querySelector('li').classList.remove('active');
-    }
-    tabsArray[i].querySelector('li').classList.add('active');
-    for (let z = 0; z<imgArray.length; z++){
-      imgArray[z].classList.add('change-animation');
-      setTimeout(() => imgArray[z].classList.remove('ordered'),300);
-      setTimeout(() => imgArray[z].classList.remove('order-3'),300);
-      setTimeout(() => imgArray[z].classList.remove('order-2'),300);
-      setTimeout(() => imgArray[z].classList.remove('order-1'),300);
-
+    */ //Уменьшаем размер блока, если фотографий для него меньше 12
       /*if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]===imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0] & i!=0) {
           setTimeout(() => imgArray[z].classList.add('ordered'),300);
           setTimeout(() => imgArray[imgArray.length-1].classList.add('order-last'),300);
@@ -191,32 +184,45 @@ for (let i = 0; i<tabsArray.length; i++) {
       }
       else {
           setTimeout(() => imgArray[z].classList.remove('ordered'),300);
-      }*/
-      if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Web') {
-          if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Web') {
-            setTimeout(() => imgArray[z].classList.add('ordered'),300);
-          }
-          setTimeout(() => imgArray[imgArray.length-1].classList.add('order-3'),300);
-      };
-      if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Graphic') {
-          if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Graphic') {
-            setTimeout(() => imgArray[z].classList.add('ordered'),300);
-          }
-          setTimeout(() => imgArray[imgArray.length-2].classList.add('order-3'),300);
-          setTimeout(() => imgArray[imgArray.length-1].classList.add('order-2'),300);
-      };
-      if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Artwork') {
-          if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Artwork') {
-            setTimeout(() => imgArray[z].classList.add('ordered'),300);
-          }
-          setTimeout(() => imgArray[imgArray.length-3].classList.add('order-3'),300);
-          setTimeout(() => imgArray[imgArray.length-2].classList.add('order-2'),300);
-          setTimeout(() => imgArray[imgArray.length-1].classList.add('order-1'),300);
-      };
-      imgArray[z].addEventListener('animationend', function () {
-        this.classList.remove('change-animation');
-      });
-    }
+      }*/ //Уменьшаем размер блока, если фотографий для него меньше 12
+      if (tabsArray[i].querySelector('li').getAttribute('class')!=='active'){
+        for (let k = 0; k<tabsArray.length; k++){
+          tabsArray[k].querySelector('li').classList.remove('active');
+        }
+        tabsArray[i].querySelector('li').classList.add('active');
+        for (let z = 0; z<imgArray.length; z++){
+          imgArray[z].classList.add('change-animation');
+          setTimeout(() => imgArray[z].classList.remove('ordered'),300);
+          setTimeout(() => imgArray[z].classList.remove('order-3'),300);
+          setTimeout(() => imgArray[z].classList.remove('order-2'),300);
+          setTimeout(() => imgArray[z].classList.remove('order-1'),300);
+    
+          if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Web') {
+            if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Web') {
+              setTimeout(() => imgArray[z].classList.add('ordered'),300);
+            }
+            setTimeout(() => imgArray[imgArray.length-1].classList.add('order-3'),300);
+          };
+          if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Graphic') {
+            if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Graphic') {
+              setTimeout(() => imgArray[z].classList.add('ordered'),300);
+            }
+            setTimeout(() => imgArray[imgArray.length-2].classList.add('order-3'),300);
+            setTimeout(() => imgArray[imgArray.length-1].classList.add('order-2'),300);
+          };
+          if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Artwork') {
+            if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Artwork') {
+              setTimeout(() => imgArray[z].classList.add('ordered'),300);
+            }
+            setTimeout(() => imgArray[imgArray.length-3].classList.add('order-3'),300);
+            setTimeout(() => imgArray[imgArray.length-2].classList.add('order-2'),300);
+            setTimeout(() => imgArray[imgArray.length-1].classList.add('order-1'),300);
+          };
+          imgArray[z].addEventListener('animationend', function () {
+          this.classList.remove('change-animation');
+          });
+        }
+      }
   })
 }
 
@@ -255,7 +261,7 @@ const regExpEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/;
         document.querySelector('.pop-subject').innerHTML=('Без темы');
       }
       if (document.querySelector('textarea').value!=='') {
-        document.querySelector('.pop-message').innerHTML=('Описание: '+'<span>'+document.querySelector('textarea').value)+'</span>';
+        document.querySelector('.pop-message').innerHTML=('<div class="description-name">Описание: </div>'+'<span>'+document.querySelector('textarea').value+'</span>');
       }
       else {
         document.querySelector('.pop-message').innerHTML=('Без описания');
