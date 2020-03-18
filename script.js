@@ -281,6 +281,7 @@ const regExpEmail = /[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+/;
 
 
 document.querySelector('button').addEventListener('click', function(){
+  document.getElementById("quote-form").reset();
   pop.classList.add('not-display');
   document.querySelector('main').classList.remove('de-emphasized');
   document.querySelector('body').classList.remove('overflow-hidden');
