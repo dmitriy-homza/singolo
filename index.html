@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr"><head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -28,12 +29,16 @@
       <img src="assets/chev.png" class="left" alt="Предыдущий">
       <div class="slider-wrapper">
         <div class="item s-active slide-1">
-          <img src="assets/Vertical.png" class="vert" width="240" height="483" alt="Вертикальный мокап">
-          <img src="assets/slider/phone-vertical-display.png" class="vert-screen" width="188" height="333" alt="Вертикальный мокап">
-          <img src="assets/slider/VPhone.png" class="VPhone" width="216" height="458" alt="Горизонтальный мокап">
-          <img src="assets/slider/phone-horizontal-display.png" class="hori-screen" width="333" height="188" alt="Горизонтальный мокап">
-          <img src="assets/Horizontal.png" class="horizont" width="484" height="240" alt="Горизонтальный мокап">
-          <img src="assets/slider/HPhone.png" class="HPhone" width="458" height="216" alt="Горизонтальный мокап">
+          <div class="left-phone">
+            <img src="assets/Vertical.png" class="vert" width="240" height="483" alt="Вертикальный мокап">
+            <img src="assets/slider/phone-vertical-display.png" class="vert-screen" width="188" height="333" alt="Вертикальный мокап">
+            <img src="assets/slider/VPhone.png" class="VPhone" width="216" height="458" alt="Горизонтальный мокап">  
+          </div>
+          <div class="right-phone">
+            <img src="assets/slider/phone-horizontal-display.png" class="hori-screen" width="333" height="188" alt="Горизонтальный мокап">
+            <img src="assets/Horizontal.png" class="horizont" width="484" height="240" alt="Горизонтальный мокап">
+            <img src="assets/slider/HPhone.png" class="HPhone" width="458" height="216" alt="Горизонтальный мокап">  
+          </div>
         </div>
         <div class="item slide-2">
           <img src="assets/slider/item2.png" class="horizont" width="525" height="521" alt="Второй слайд">
@@ -152,13 +157,13 @@
             <input type="text" name="Subject" id="subject" placeholder="Subject" maxlength="120">
             <textarea name="Details" rows="13" cols="80" placeholder="Describe your project in detail..." maxlength="6000"></textarea>
             <div class="submit-form">
-              <input type="submit" name="submit" id="submit" onclick="event.preventDefault()" value="Submit">
+              <input type="submit" name="submit" id="submit" onclick="event.preventDefault()" value="send">
               <p></p>
             </div>
           </form>
           <div class="contacts">
             <h5>Contact Information</h5>
-            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
             <div class="links">
               <img src="assets/sprite.png" width="13" height="54" alt="icons">
               <div class="a-links">
