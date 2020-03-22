@@ -176,6 +176,7 @@ nav li:nth-of-type(2n+1):active a {
   display: flex;
   justify-content: space-between;
   height: 595px;
+  padding-top: 6px;
 
   background-color: #f06c64;
   border-bottom: 5px solid rgb(234, 103, 107);
@@ -263,7 +264,7 @@ nav li:nth-of-type(2n+1):active a {
 .vert-screen {
   position: absolute;
   left: 69px;
-  bottom: 91px;
+  bottom: 95px;
   z-index: 1;
 
   transition: 0.5s;
@@ -272,7 +273,7 @@ nav li:nth-of-type(2n+1):active a {
 .hori-screen {
   position: absolute;
   left: 428px;
-  bottom: 166px;
+  bottom: 170px;
   z-index: 1;
 
   transition: 0.5s;
@@ -357,6 +358,7 @@ p {
 
   font-size: 18px;
   font-weight: 200;
+  text-align: justify;
   color: #767e9e;
   letter-spacing: -0.05px;
   line-height: 1.667;
@@ -713,17 +715,21 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 input[type=submit] {
-  width: 280px;
+  width: 140px;
 
+  font-size: 14px;
+  text-transform: uppercase;
   font-weight: 600;
-  color: white;
+  color: #886A30;
   letter-spacing: 1px;
+  background-color: #FBC65F;
+  padding-top: 13px;
 
   transition: 0.3s;
 }
 
 input[type=submit]:hover {
-  background-color: #7b3632;
+  background-color: #fbe8a4;
 
   transition: 0.3s;
 }
@@ -923,4 +929,227 @@ button:active, button:focus {
 
 button::-moz-focus-inner {
   border: 0 !important;
+}
+
+@media only screen and (max-width: 1019px) and (min-width: 768px) { 
+  body {
+    width: 100%;
+    min-width: inherit;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .wrapper {
+    padding: 50px 40.6px 0px 40.6px;
+  }
+  
+  .sticky {
+    width: 100%;
+  }
+
+  .slider {
+    height: auto;
+    padding: 40.97px 0px;
+  }
+
+  .left {
+    margin-left: 29.42px;
+  }
+
+  .right {
+    margin-right: 26.86px;
+  }
+
+  .s-active, .next {
+    justify-content: space-around;
+  }
+
+  .left-phone, .right-phone {
+    max-height: 366.25px;
+    position: relative;
+  }
+
+  .left-phone {
+    max-width: 183px;
+  }
+
+  .right-phone {
+    max-width: 362px;
+  }
+
+  .VPhone {
+    position: relative;
+    width: 162.36px;
+    height: auto;
+    top: -625px;
+    left: 0px;
+    margin: 0px;
+  }
+
+  .vert {
+    position: relative;
+    width: 180.71px;
+    height: auto;
+    margin: 0px !important;
+  }
+
+  .vert-screen {
+    position: relative;
+    left: 10px;
+    bottom: 320px;
+    width: 142px;
+    height: 251px;
+  }
+
+  .hori-screen {
+    position: relative;
+    left: 43px;
+    bottom: -109.52px;
+    width: 251.00px;
+    height: auto;
+  }
+  
+  .horizont {
+    position: relative;
+    top: -47px;
+    left: -2px;
+    width: 363.67px;
+    height: auto;
+    margin-bottom: 5.9px;
+    margin-right: -17px;
+  }
+
+  .slide-2 img {
+    top: 0px;
+  }
+
+  .HPhone {
+    position: relative;
+    top: -239px;
+    left: -2px;
+    width: 344.26px;
+    height: auto;
+    margin: 0px;
+  }
+
+  .services {
+    width: 100%;
+    height: auto;
+  }
+
+  .services .wrapper {
+    padding-bottom: 55px;;
+  }
+
+  .services .wrapper p {
+    padding-bottom: 20px;;
+  }
+  
+  .services article {
+    width: calc(100% / 2.6 - 10px);
+    margin-top: 12px;
+  }
+
+  .services article p {
+    max-width: 360px;
+  }
+
+  .advantage-wrapper {
+    margin-top: 0px;
+  }
+
+  .portfolio-full {
+    height: auto;
+  }
+
+  .gallery {
+    margin-top: 28px;
+  }
+
+  .gallery img {
+    width: calc((100% - 39.3px) / 3);
+    height: auto;
+  }
+
+  .gallery img:nth-of-type(3n) {
+    margin-right: 0px !important;
+  }
+
+  .about {
+    height: auto;
+  }
+
+  .about .wrapper {
+    padding-bottom: 75px;
+  }
+
+  .workers {
+    width: 100%;
+  }
+
+  .workers .card {
+    width: calc((100% - 29.06px) / 3);
+  }
+
+  .workers .card > img:first-of-type {
+    width: 100%;
+    height: auto;
+  }
+
+  .card p {
+    width: 100%;
+  }
+
+  .social {
+    margin-top: 10px;
+  }
+
+  .quote {
+    height: auto;
+  }
+
+  .quote-content {
+    margin-top: 31px;
+  }
+  
+  .quote .wrapper {
+    padding-bottom: 45px;
+  }
+
+  .quote form {
+    width: 63.87%;
+  }
+
+  .contacts {
+    width: 100%;
+    margin-left: 29px;
+  }
+
+  .contacts p {
+    width: 100%;
+  }
+
+  .links {
+    margin-top: 12px;
+  }
+
+  input {
+    margin-bottom: 12px;
+  }
+
+  #submit {
+    margin-bottom: 0px;
+  }
+
+  .submit-form p {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  textarea {
+    height: 131px;
+  }
+
 }
