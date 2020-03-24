@@ -21,6 +21,10 @@ for (let i = 0; i<=navLink.length-1; i++) {
 //Активируем перемещение к секции по клику
 for (i=0; i<oddNavLink.length; i++) {
   oddNavLink[i].addEventListener('click', function(){
+  //Для мобильного бургера 
+  burgerIcon.classList.remove('rotate');
+  document.querySelector('nav').classList.remove('menu-active');
+
   document.querySelector('ul li.active').classList.remove('active');
   this.classList.add('active');
   let blockID = this.querySelector('a').getAttribute('href').substr(1);
@@ -32,7 +36,7 @@ for (i=0; i<oddNavLink.length; i++) {
 };
 
 window.onscroll = function() {
-  if (window.pageYOffset > header.offsetTop+50) {
+  if (window.pageYOffset > header.offsetTop) {
     header.classList.add("sticky");
     // Активные ссылки
     if (window.pageYOffset+150 >= header.offsetTop) {
@@ -286,3 +290,16 @@ document.querySelector('button').addEventListener('click', function(){
   document.querySelector('main').classList.remove('de-emphasized');
   document.querySelector('body').classList.remove('overflow-hidden');
 });
+
+let burgerIcon = document.querySelector('header img');
+burgerIcon.addEventListener('click', function() {
+  if (burgerIcon.getAttribute('class')=='rotate') {
+    burgerIcon.classList.remove('rotate');
+    document.querySelector('nav').classList.remove('menu-active');
+  }
+  else {
+    burgerIcon.classList.add('rotate');
+    document.querySelector('nav').classList.add('menu-active');
+  }
+
+})
