@@ -21,10 +21,7 @@ for (let i = 0; i<=navLink.length-1; i++) {
 //Активируем перемещение к секции по клику
 for (i=0; i<oddNavLink.length; i++) {
   oddNavLink[i].addEventListener('click', function(){
-  //Для мобильного бургера 
-  burgerIcon.classList.remove('rotate');
-  document.querySelector('nav').classList.remove('menu-active');
-
+  isNotBurger();  //Для мобильного бургера 
   document.querySelector('ul li.active').classList.remove('active');
   this.classList.add('active');
   let blockID = this.querySelector('a').getAttribute('href').substr(1);
@@ -294,12 +291,30 @@ document.querySelector('button').addEventListener('click', function(){
 let burgerIcon = document.querySelector('header img');
 burgerIcon.addEventListener('click', function() {
   if (burgerIcon.getAttribute('class')=='rotate') {
-    burgerIcon.classList.remove('rotate');
-    document.querySelector('nav').classList.remove('menu-active');
+    isNotBurger();
   }
   else {
-    burgerIcon.classList.add('rotate');
-    document.querySelector('nav').classList.add('menu-active');
+    isBurger();
   }
 
 })
+
+document.querySelector('.burger-overflow-hidden').addEventListener('click', function() {
+  isNotBurger();
+});
+
+function isBurger () {
+  document.querySelector('h1').classList.add('opacity');
+  burgerIcon.classList.add('rotate');
+  document.querySelector('nav').classList.add('menu-active');
+  document.querySelector('.burger-overflow-hidden').classList.add('burger-overflow-animation');
+  setTimeout(() => document.querySelector('.burger-overflow-hidden').classList.add('burger-overflow'),100);
+}
+
+function isNotBurger () {
+  document.querySelector('h1').classList.remove('opacity');
+  burgerIcon.classList.remove('rotate');
+  document.querySelector('nav').classList.remove('menu-active');
+  document.querySelector('.burger-overflow-hidden').classList.remove('burger-overflow');
+  setTimeout(() => document.querySelector('.burger-overflow-animation').classList.remove('burger-overflow-animation'),500);
+}
