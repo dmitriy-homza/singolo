@@ -318,3 +318,18 @@ function isNotBurger () {
   document.querySelector('.burger-overflow-hidden').classList.remove('burger-overflow');
   setTimeout(() => document.querySelector('.burger-overflow-animation').classList.remove('burger-overflow-animation'),500);
 }
+
+//Высота блока галлереи ровно на восемькартинок 
+if (document.documentElement.clientWidth<768) {
+  document.querySelector('.gallery').style.cssText=`max-height: ${document.querySelector('.gallery img').height*4+64}px`;
+}
+
+
+  window.addEventListener(`resize`, event => {
+    if (document.documentElement.clientWidth<768) {
+      document.querySelector('.gallery').style.cssText=`max-height: ${document.querySelector('.gallery img').height*4+64}px`;
+    }  
+    else {
+      document.querySelector('.gallery').style.cssText=``;
+    }
+  }, false);
