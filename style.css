@@ -840,8 +840,8 @@ footer .social img:hover {
 
   display: flex;
   flex-direction: column;
-  max-height: 540px;
-  overflow: hidden;
+  max-height: 95vh;
+  overflow: auto;
   width: 700px;
   z-index: 2;
 
@@ -1526,6 +1526,7 @@ button::-moz-focus-inner {
   }
 
   .card p {
+    width: 100%;
     padding-top: 1px;
   }
 
@@ -1621,6 +1622,18 @@ button::-moz-focus-inner {
 
   .pop-wrap {
     width: 90%;
-    height: calc(100% - 38px);
+    height: calc(100vh - 98px);
+  }
+
+  footer span {
+    display: none;
+  }
+
+  .popup p {
+    max-height: inherit;
+  }
+
+  .pop-message span {
+    height: calc(100vh - 255px);
   }
 }
