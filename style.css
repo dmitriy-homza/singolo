@@ -1310,17 +1310,16 @@ button::-moz-focus-inner {
     left: 22px;
 
     display: block;
-    transform: rotate(90deg);
     transition: 0.5s;
   }
 
   header .rotate {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
   }
 
   header img {
     position: absolute;
-    top: 23px;
+    top: 27px;
     left: 22px;
     z-index: 6;
 
