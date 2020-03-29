@@ -177,8 +177,8 @@ nav li:nth-of-type(2n+1):active a {
 .slider {
   display: flex;
   justify-content: space-between;
-  height: 595px;
-  padding-top: 95px;
+  height: 588px;
+  padding-top: 102px;
 
   background-color: #f06c64;
   border-bottom: 7px solid rgb(234, 103, 107);
@@ -208,7 +208,6 @@ nav li:nth-of-type(2n+1):active a {
 .item {
   display: none;
   position: relative;
-  top: 5px;
   animation: 0.7s cubic-bezier(0.71, -0.02, 0.27, 0.98);
   width: 100%;
 }
@@ -1376,11 +1375,11 @@ button::-moz-focus-inner {
   .s-active, .next {
     justify-content: space-between;
     max-width: 305px;
-    padding: 15px 10px;
+    padding: 20px 10px 15px 10px;
   }
 
   .slider-wrapper {
-    padding-bottom: 6px;
+    padding-bottom: 2px;
   }
 
   .slide-2 {
@@ -1633,7 +1632,7 @@ button::-moz-focus-inner {
   width: 100vw;
   max-height: inherit;
   height: 100vh;
-  }
+  }я
 
   .pop-wrap {
     width: 90%;
