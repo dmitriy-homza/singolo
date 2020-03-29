@@ -1211,6 +1211,7 @@ button::-moz-focus-inner {
   .contacts p {
     padding-top: 0px;
   }
+  
 
 }
 
@@ -1598,6 +1599,7 @@ button::-moz-focus-inner {
     transition: 0.5s;
     text-align: center;
     color: wheat;
+    font-size: 11px;
   }
 
   .contacts {
@@ -1632,7 +1634,7 @@ button::-moz-focus-inner {
   width: 100vw;
   max-height: inherit;
   height: 100vh;
-  }я
+  }
 
   .pop-wrap {
     width: 90%;
