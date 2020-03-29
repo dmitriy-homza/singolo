@@ -167,8 +167,11 @@ function changeOrder() {
   imgArray[z].classList.add('ordered');
 }
 
+let gallery = document.querySelector('.gallery')
+let other = document.querySelector('.gallery .other')
 let imgArray = document.querySelectorAll('.gallery img');
 let tabsArray = document.querySelectorAll('.portfolio a');
+let delay = 1900;
 for (let i = 0; i<tabsArray.length; i++) {
   tabsArray[i].addEventListener('click', function() {
     /*if (i!=0) {
@@ -186,44 +189,31 @@ for (let i = 0; i<tabsArray.length; i++) {
       else {
           setTimeout(() => imgArray[z].classList.remove('ordered'),300);
       }*/ //Уменьшаем размер блока, если фотографий для него меньше 12
+
       if (tabsArray[i].querySelector('li').getAttribute('class')!=='active'){
         for (let k = 0; k<tabsArray.length; k++){
           tabsArray[k].querySelector('li').classList.remove('active');
         }
-        tabsArray[i].querySelector('li').classList.add('active');
-        for (let z = 0; z<imgArray.length; z++){
-          imgArray[z].classList.add('change-animation');
-          setTimeout(() => imgArray[z].classList.remove('ordered'),300);
-          setTimeout(() => imgArray[z].classList.remove('order-3'),300);
-          setTimeout(() => imgArray[z].classList.remove('order-2'),300);
-          setTimeout(() => imgArray[z].classList.remove('order-1'),300);
-    
+        tabsArray[i].querySelector('li').classList.add('active')
+        
           if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Web') {
-            if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Web') {
-              setTimeout(() => imgArray[z].classList.add('ordered'),300);
-            }
-            setTimeout(() => imgArray[imgArray.length-1].classList.add('order-3'),300);
+                gallery.insertBefore(document.querySelectorAll('.Web')[0], document.querySelectorAll('.gallery img')[0]);
+                gallery.insertBefore(document.querySelectorAll('.gallery img')[11], document.querySelectorAll('.gallery img')[0]);
           };
+
           if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Graphic') {
-            if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Graphic') {
-              setTimeout(() => imgArray[z].classList.add('ordered'),300);
-            }
-            setTimeout(() => imgArray[imgArray.length-2].classList.add('order-3'),300);
-            setTimeout(() => imgArray[imgArray.length-1].classList.add('order-2'),300);
+                gallery.insertBefore(document.querySelectorAll('.Graphic')[0], document.querySelectorAll('.gallery img')[0]);
+                gallery.insertBefore(document.querySelectorAll('.gallery img')[11], document.querySelectorAll('.gallery img')[0]);
           };
           if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='Artwork') {
-            if (imgArray[z].getAttribute('class').match(/[A-za-z]+/)[0]==='Artwork') {
-              setTimeout(() => imgArray[z].classList.add('ordered'),300);
-            }
-            setTimeout(() => imgArray[imgArray.length-3].classList.add('order-3'),300);
-            setTimeout(() => imgArray[imgArray.length-2].classList.add('order-2'),300);
-            setTimeout(() => imgArray[imgArray.length-1].classList.add('order-1'),300);
-          };
-          imgArray[z].addEventListener('animationend', function () {
-          this.classList.remove('change-animation');
-          });
-        }
-      }
+              gallery.insertBefore(document.querySelectorAll('.Artwork')[0], document.querySelectorAll('.gallery img')[0]);
+              gallery.insertBefore(document.querySelectorAll('.gallery img')[11], document.querySelectorAll('.gallery img')[0]);
+          }; 
+          if (tabsArray[i].querySelector('li').innerHTML.match(/[A-za-z]+/)[0]==='All') {
+              gallery.insertBefore(document.querySelectorAll('.gallery img')[11], document.querySelectorAll('.gallery img')[0]);
+          }; 
+
+      };
   })
 }
 
